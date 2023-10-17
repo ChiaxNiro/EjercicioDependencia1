@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         menu();
-    }
+    }   
     public static Vehiculo seleccionDeAuto(int seleccion){
         switch (seleccion) {
             case 1:
@@ -13,7 +13,7 @@ public class Main {
                 Vehiculo kawasaki = new Vehiculo("Motocicleta",100);
                 return kawasaki;
             case 3:
-                Vehiculo trek = new Vehiculo("Bicicleta", 30);
+                Vehiculo trek = new Vehiculo("Bicicleta", 15);
                 return trek;
         }
         return null;
@@ -33,6 +33,18 @@ public class Main {
             case 3:
                 Ubicacion victoria = new Ubicacion("Victoria",64);
                 return victoria;
+            case 4:
+                Ubicacion santiago = new Ubicacion("Santiago",678);
+                return santiago;
+            case 5:
+                Ubicacion valdivia = new Ubicacion("Valdivia",169);
+                return valdivia;
+            case 6:
+                Ubicacion talca = new Ubicacion("Talca",425);
+                return talca;
+            case 7:
+                Ubicacion puertoMontt = new Ubicacion("Puerto Montt",352);
+                return puertoMontt;
         }
         return null;
     }
@@ -43,7 +55,7 @@ public class Main {
     public static void menu(){
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Ingrese su nombre");
+        System.out.println("Ingrese su nombre: ");
         String nombre = sc.nextLine();
         Persona persona1 = crearPersona(nombre);
 
@@ -51,6 +63,10 @@ public class Main {
         System.out.println("1. Pucon");
         System.out.println("2. Concepcion");
         System.out.println("3. Victoria");
+        System.out.println("4. Santiago");
+        System.out.println("5. Valdivia");
+        System.out.println("6. Talca");
+        System.out.println("7. Puerto Montt");
         int ubicacion = sc.nextInt();
         Ubicacion ubicacion1 = seleccionarUbicacion(ubicacion);
 

@@ -15,11 +15,5 @@ public class Vehiculo {
         return velocidad;
     }
 
-    public void setVelocidad(int velocidad) {
-        this.velocidad = velocidad;
-    }
 
-    public void setVehiculo(String vehiculo) {
-        this.vehiculo = vehiculo;
-    }
 }
